@@ -4,9 +4,9 @@ A simple React dashboard that helps an evaluation trader answer one question qui
 
 **Am I currently in danger of violating my account rules?**
 
-Live demo and GitHub links (fill in after you publish):
-- **Live:** _(Vercel/Netlify URL)_
-- **Repo:** _(GitHub URL)_
+Live demo and GitHub links:
+- **Live:** [https://thenavnitdev.github.io/Task-Trading/](https://thenavnitdev.github.io/Task-Trading/)
+- **Repo:** [https://github.com/thenavnitdev/Task-Trading](https://github.com/thenavnitdev/Task-Trading)
 
 ## How to run
 
@@ -22,29 +22,16 @@ npm run build    # production build
 npm run preview  # preview the production build
 ```
 
-## Submit (GitHub + live URL)
+## Deploy (GitHub Pages from `main`)
 
-### 1. Push to GitHub
-Create an empty GitHub repo, then from this folder:
+Everything lives on **`main`**. On each push, GitHub Actions builds the Vite app and publishes the `dist` folder via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). The Vite `base` path is `/Task-Trading/`.
 
-```bash
-git remote add origin https://github.com/<your-username>/<repo-name>.git
-git branch -M main
-git push -u origin main
-```
+### One-time setup
+1. Open [Pages settings](https://github.com/thenavnitdev/Task-Trading/settings/pages)
+2. Under **Build and deployment** → **Source**, choose **GitHub Actions**
+3. Push to `main` (or re-run the workflow under [Actions](https://github.com/thenavnitdev/Task-Trading/actions))
 
-### 2. Deploy (Vercel — recommended)
-1. Go to [vercel.com/new](https://vercel.com/new)
-2. Import the GitHub repo
-3. Framework preset: **Vite** (defaults are fine)
-4. Deploy → copy the live URL into this README
-
-Or with the Vercel CLI (after `npx vercel login`):
-
-```bash
-npm run build
-npx vercel --prod
-```
+Live site: **https://thenavnitdev.github.io/Task-Trading/**
 
 ## What I built
 
